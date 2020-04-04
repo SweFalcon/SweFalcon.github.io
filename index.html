@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	let text2 = 0;
+
+</script>
+<head>
+	<title>Text Saver</title>
+</head>
+<body>
+	<img src="https://www.kumla.se/images/18.f36d14315437bafd7910b6b/1466517295441/sidbild_tatorts-och-bostadsnara-natur.jpg">
+	<p><textarea type="text" placeholder="Text Here (Expandable window)" id="text1"></textarea></p>
+	<br>
+	<div id="b1"><button onclick="save()">Save/Overwrite</button></div>
+	<div id="b2"><button onclick="load()">  Load Text  </button></div>
+<style type="text/css">
+	button:hover{
+		color: red;
+		text-decoration: underline;
+		font-family: Arial;
+	}
+
+	p{
+		position:absolute;
+		top: 10px;
+		left:230px;
+	}
+
+	#b1{
+		position: absolute;
+		top: 200px;
+		left: 220px;
+	}
+	#b2{
+		position: absolute;
+		top: 200px;
+		left: 326px;
+	}
+	
+</style>
+
+</body>
+<script type="text/javascript">
+	function save(){
+		var text2 = document.getElementById("text1").value;
+		window.localStorage.setItem("savedtext", text2)
+	}
+	function load(){
+		var text3 = window.localStorage.getItem("savedtext");
+		document.getElementById("text1").value = text3;
+	
+		alert("Press OK To Finish Loading")
+		
+
+	}
+
+</script>
+</html>
