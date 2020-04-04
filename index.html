@@ -44,6 +44,7 @@
 	function save(){
 		var text2 = document.getElementById("text1").value;
 		window.localStorage.setItem("savedtext", text2)
+		alert("Succesfully Saved Text")
 	}
 	function load(){
 		var text3 = window.localStorage.getItem("savedtext");
